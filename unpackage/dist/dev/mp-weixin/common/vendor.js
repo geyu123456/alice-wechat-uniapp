@@ -8642,9 +8642,9 @@ function resolveLocaleChain(locale) {
 
 /***/ }),
 /* 5 */
-/*!************************************************!*\
-  !*** D:/projects/wechat/alice-mall/pages.json ***!
-  \************************************************/
+/*!***************************************************************!*\
+  !*** C:/Users/gyu98/Documents/alice-wechat-uniapp/pages.json ***!
+  \***************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -8785,9 +8785,9 @@ function normalizeComponent (
 
 /***/ }),
 /* 12 */
-/*!********************************************************************************************************!*\
-  !*** D:/projects/wechat/alice-mall/node_modules/@escook/request-miniprogram/miniprogram_dist/index.js ***!
-  \********************************************************************************************************/
+/*!***********************************************************************************************************************!*\
+  !*** C:/Users/gyu98/Documents/alice-wechat-uniapp/node_modules/@escook/request-miniprogram/miniprogram_dist/index.js ***!
+  \***********************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
