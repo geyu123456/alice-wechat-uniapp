@@ -14,7 +14,7 @@
 		</view>
 		<view class="goods_list">
 			<view class="goods_item" v-for="(item,i) in allGoods" :key="i">
-				<image  class="image" :src="item.mainImage"></image>
+				<image  class="image" :src="item.mainImage" @click="gotoDetail(item)"></image>
 			</view>
 		</view>
 	</view>
@@ -57,6 +57,12 @@
 				if (res.code !== 200) return uni.$showMsg()
 				this.allGoods = res.data
 				console.log(res.data)
+			},
+			// 点击跳转到商品详情页面
+			gotoDetail(item) {
+			  uni.navigateTo({
+			    url: '/subpkg/goods_detail/goods_detail?goods_id=' + item.goodsId
+			  })
 			}
 		}
 	}

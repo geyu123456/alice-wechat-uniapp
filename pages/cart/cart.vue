@@ -1,11 +1,14 @@
 <template>
 	<view>
-		
+		购物车
 	</view>
 </template>
 
 <script>
+	import badgeMix from '@/mixin/tabar-badge.js'
+	
 	export default {
+		mixins:[badgeMix],
 		data() {
 			return {
 				
