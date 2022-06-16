@@ -27,7 +27,9 @@
 </template>
 
 <script>
+	import badgeMix from '@/mixin/tabar-badge.js'
 	export default {
+		mixins:[badgeMix],
 		data() {
 			return {
 				navLeftList: [],

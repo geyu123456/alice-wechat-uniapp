@@ -129,7 +129,7 @@
 			         goods_price: this.goods_info.price, // 商品的价格
 			         goods_count: 1,                           // 商品的数量
 			         goods_small_logo: this.goods_info.mainImage, // 商品的图片
-			         goods_state: true                         // 商品的勾选状态
+			         goods_state: false                         // 商品的勾选状态
 			      }
 			
 			      // 3. 通过 this 调用映射过来的 addToCart 方法，把商品信息对象存储到购物车中
