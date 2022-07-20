@@ -13,16 +13,25 @@ var _vue = _interopRequireDefault(__webpack_require__(/*! vue */ 4));
 var _App = _interopRequireDefault(__webpack_require__(/*! ./App */ 6));
 var _store = _interopRequireDefault(__webpack_require__(/*! @/store/store.js */ 12));
 
-var _requestMiniprogram = __webpack_require__(/*! @escook/request-miniprogram */ 15);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function ownKeys(object, enumerableOnly) {var keys = Object.keys(object);if (Object.getOwnPropertySymbols) {var symbols = Object.getOwnPropertySymbols(object);if (enumerableOnly) symbols = symbols.filter(function (sym) {return Object.getOwnPropertyDescriptor(object, sym).enumerable;});keys.push.apply(keys, symbols);}return keys;}function _objectSpread(target) {for (var i = 1; i < arguments.length; i++) {var source = arguments[i] != null ? arguments[i] : {};if (i % 2) {ownKeys(Object(source), true).forEach(function (key) {_defineProperty(target, key, source[key]);});} else if (Object.getOwnPropertyDescriptors) {Object.defineProperties(target, Object.getOwnPropertyDescriptors(source));} else {ownKeys(Object(source)).forEach(function (key) {Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key));});}}return target;}function _defineProperty(obj, key, value) {if (key in obj) {Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true });} else {obj[key] = value;}return obj;}wx.__webpack_require_UNI_MP_PLUGIN__ = __webpack_require__;
+var _requestMiniprogram = __webpack_require__(/*! @escook/request-miniprogram */ 16);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function ownKeys(object, enumerableOnly) {var keys = Object.keys(object);if (Object.getOwnPropertySymbols) {var symbols = Object.getOwnPropertySymbols(object);if (enumerableOnly) symbols = symbols.filter(function (sym) {return Object.getOwnPropertyDescriptor(object, sym).enumerable;});keys.push.apply(keys, symbols);}return keys;}function _objectSpread(target) {for (var i = 1; i < arguments.length; i++) {var source = arguments[i] != null ? arguments[i] : {};if (i % 2) {ownKeys(Object(source), true).forEach(function (key) {_defineProperty(target, key, source[key]);});} else if (Object.getOwnPropertyDescriptors) {Object.defineProperties(target, Object.getOwnPropertyDescriptors(source));} else {ownKeys(Object(source)).forEach(function (key) {Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key));});}}return target;}function _defineProperty(obj, key, value) {if (key in obj) {Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true });} else {obj[key] = value;}return obj;}wx.__webpack_require_UNI_MP_PLUGIN__ = __webpack_require__;
 
 
 uni.$http = _requestMiniprogram.$http;
 _requestMiniprogram.$http.baseUrl = 'https://www.lyalice.top/api';
 
-_requestMiniprogram.$http.beforeRequest = function (option) {
+_requestMiniprogram.$http.beforeRequest = function (options) {
   uni.showLoading({
     title: '数据加载中' });
 
+
+  // 判断请求的是否为有权限的 API 接口
+  if (options.url.indexOf('/my/') !== -1) {
+    // 为请求头添加身份认证字段
+    options.header = {
+      // 字段的值可以直接从 vuex 中进行获取
+      Authorization: _store.default.state.m_user.token };
+
+  }
 
 };
 uni.$showMsg = function () {var title = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : '数据加载失败！';var duration = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 1500;

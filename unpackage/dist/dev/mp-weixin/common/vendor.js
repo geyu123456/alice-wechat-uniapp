@@ -761,7 +761,7 @@ function populateParameters(result) {var _result$brand =
   // wx.getAccountInfoSync
 
   var parameters = {
-    appId: "",
+    appId: "__UNI__3EF5B20",
     appName: "alice-mall",
     appVersion: "1.0.0",
     appVersionCode: "100",
@@ -870,7 +870,7 @@ var getAppBaseInfo = {
     var hostLanguage = language.replace('_', '-');
 
     result = sortObject(Object.assign(result, {
-      appId: "",
+      appId: "__UNI__3EF5B20",
       appName: "alice-mall",
       appVersion: "1.0.0",
       appVersionCode: "100",
@@ -1400,7 +1400,7 @@ function initData(vueOptions, context) {
     try {
       data = data.call(context); // 支持 Vue.prototype 上挂的数据
     } catch (e) {
-      if (Object({"VUE_APP_NAME":"alice-mall","VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG) {
+      if (Object({"NODE_ENV":"development","VUE_APP_NAME":"alice-mall","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG) {
         console.warn('根据 Vue 的 data 函数初始化小程序 data 失败，请尽量确保 data 函数中不访问 vm 对象，否则可能影响首次数据渲染速度。', data);
       }
     }
@@ -2461,57 +2461,6 @@ uni$1;exports.default = _default;
 
 /***/ }),
 
-/***/ 102:
-/*!*********************************************************************************************************************!*\
-  !*** C:/Users/gyu98/Documents/alice-wechat-uniapp/uni_modules/uni-goods-nav/components/uni-goods-nav/i18n/index.js ***!
-  \*********************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _en = _interopRequireDefault(__webpack_require__(/*! ./en.json */ 103));
-var _zhHans = _interopRequireDefault(__webpack_require__(/*! ./zh-Hans.json */ 104));
-var _zhHant = _interopRequireDefault(__webpack_require__(/*! ./zh-Hant.json */ 105));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}var _default =
-{
-  en: _en.default,
-  'zh-Hans': _zhHans.default,
-  'zh-Hant': _zhHant.default };exports.default = _default;
-
-/***/ }),
-
-/***/ 103:
-/*!********************************************************************************************************************!*\
-  !*** C:/Users/gyu98/Documents/alice-wechat-uniapp/uni_modules/uni-goods-nav/components/uni-goods-nav/i18n/en.json ***!
-  \********************************************************************************************************************/
-/*! exports provided: uni-goods-nav.options.shop, uni-goods-nav.options.cart, uni-goods-nav.buttonGroup.addToCart, uni-goods-nav.buttonGroup.buyNow, default */
-/***/ (function(module) {
-
-module.exports = JSON.parse("{\"uni-goods-nav.options.shop\":\"shop\",\"uni-goods-nav.options.cart\":\"cart\",\"uni-goods-nav.buttonGroup.addToCart\":\"add to cart\",\"uni-goods-nav.buttonGroup.buyNow\":\"buy now\"}");
-
-/***/ }),
-
-/***/ 104:
-/*!*************************************************************************************************************************!*\
-  !*** C:/Users/gyu98/Documents/alice-wechat-uniapp/uni_modules/uni-goods-nav/components/uni-goods-nav/i18n/zh-Hans.json ***!
-  \*************************************************************************************************************************/
-/*! exports provided: uni-goods-nav.options.shop, uni-goods-nav.options.cart, uni-goods-nav.buttonGroup.addToCart, uni-goods-nav.buttonGroup.buyNow, default */
-/***/ (function(module) {
-
-module.exports = JSON.parse("{\"uni-goods-nav.options.shop\":\"店铺\",\"uni-goods-nav.options.cart\":\"购物车\",\"uni-goods-nav.buttonGroup.addToCart\":\"加入购物车\",\"uni-goods-nav.buttonGroup.buyNow\":\"立即购买\"}");
-
-/***/ }),
-
-/***/ 105:
-/*!*************************************************************************************************************************!*\
-  !*** C:/Users/gyu98/Documents/alice-wechat-uniapp/uni_modules/uni-goods-nav/components/uni-goods-nav/i18n/zh-Hant.json ***!
-  \*************************************************************************************************************************/
-/*! exports provided: uni-goods-nav.options.shop, uni-goods-nav.options.cart, uni-goods-nav.buttonGroup.addToCart, uni-goods-nav.buttonGroup.buyNow, default */
-/***/ (function(module) {
-
-module.exports = JSON.parse("{\"uni-goods-nav.options.shop\":\"店鋪\",\"uni-goods-nav.options.cart\":\"購物車\",\"uni-goods-nav.buttonGroup.addToCart\":\"加入購物車\",\"uni-goods-nav.buttonGroup.buyNow\":\"立即購買\"}");
-
-/***/ }),
-
 /***/ 11:
 /*!**********************************************************************************************************!*\
   !*** ./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib/runtime/componentNormalizer.js ***!
@@ -2655,7 +2604,7 @@ var _vuex = _interopRequireDefault(__webpack_require__(/*! vuex */ 13));
 
 var _cart = _interopRequireDefault(__webpack_require__(/*! @/store/cart.js */ 14));
 
-var _user = _interopRequireDefault(__webpack_require__(/*! ./user.js */ 126));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };} // 1. 导入 Vue 和 Vuex
+var _user = _interopRequireDefault(__webpack_require__(/*! ./user.js */ 15));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };} // 1. 导入 Vue 和 Vuex
 // 1. 导入购物车的 vuex 模块
 // 导入用户的 vuex 模块
 // 2. 将 Vuex 安装为 Vue 的插件
@@ -2678,50 +2627,53 @@ var _default = store;exports.default = _default;
 /***/ }),
 
 /***/ 126:
-/*!******************************************************************!*\
-  !*** C:/Users/gyu98/Documents/alice-wechat-uniapp/store/user.js ***!
-  \******************************************************************/
+/*!*********************************************************************************************************************!*\
+  !*** C:/Users/gyu98/Documents/alice-wechat-uniapp/uni_modules/uni-goods-nav/components/uni-goods-nav/i18n/index.js ***!
+  \*********************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _default = {
-  // 开启命名空间
-  namespaced: true,
+Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _en = _interopRequireDefault(__webpack_require__(/*! ./en.json */ 127));
+var _zhHans = _interopRequireDefault(__webpack_require__(/*! ./zh-Hans.json */ 128));
+var _zhHant = _interopRequireDefault(__webpack_require__(/*! ./zh-Hant.json */ 129));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}var _default =
+{
+  en: _en.default,
+  'zh-Hans': _zhHans.default,
+  'zh-Hant': _zhHant.default };exports.default = _default;
 
-  // state 数据
-  state: function state() {return {
-      // 3. 读取本地的收货地址数据，初始化 address 对象
-      address: JSON.parse(uni.getStorageSync('address') || '{}') };},
+/***/ }),
 
+/***/ 127:
+/*!********************************************************************************************************************!*\
+  !*** C:/Users/gyu98/Documents/alice-wechat-uniapp/uni_modules/uni-goods-nav/components/uni-goods-nav/i18n/en.json ***!
+  \********************************************************************************************************************/
+/*! exports provided: uni-goods-nav.options.shop, uni-goods-nav.options.cart, uni-goods-nav.buttonGroup.addToCart, uni-goods-nav.buttonGroup.buyNow, default */
+/***/ (function(module) {
 
-  // 方法
-  mutations: {
-    // 更新收货地址
-    updateAddress: function updateAddress(state, address) {
-      state.address = address;
+module.exports = JSON.parse("{\"uni-goods-nav.options.shop\":\"shop\",\"uni-goods-nav.options.cart\":\"cart\",\"uni-goods-nav.buttonGroup.addToCart\":\"add to cart\",\"uni-goods-nav.buttonGroup.buyNow\":\"buy now\"}");
 
-      // 2. 通过 this.commit() 方法，调用 m_user 模块下的 saveAddressToStorage 方法将 address 对象持久化存储到本地
-      this.commit('m_user/saveAddressToStorage');
-    },
-    // 1. 定义将 address 持久化存储到本地 mutations 方法
-    saveAddressToStorage: function saveAddressToStorage(state) {
-      uni.setStorageSync('address', JSON.stringify(state.address));
-    } },
+/***/ }),
 
+/***/ 128:
+/*!*************************************************************************************************************************!*\
+  !*** C:/Users/gyu98/Documents/alice-wechat-uniapp/uni_modules/uni-goods-nav/components/uni-goods-nav/i18n/zh-Hans.json ***!
+  \*************************************************************************************************************************/
+/*! exports provided: uni-goods-nav.options.shop, uni-goods-nav.options.cart, uni-goods-nav.buttonGroup.addToCart, uni-goods-nav.buttonGroup.buyNow, default */
+/***/ (function(module) {
 
+module.exports = JSON.parse("{\"uni-goods-nav.options.shop\":\"店铺\",\"uni-goods-nav.options.cart\":\"购物车\",\"uni-goods-nav.buttonGroup.addToCart\":\"加入购物车\",\"uni-goods-nav.buttonGroup.buyNow\":\"立即购买\"}");
 
-  // 数据包装器
-  getters: {
-    // 收货详细地址的计算属性
-    addstr: function addstr(state) {
-      if (!state.address.provinceName) return '';
+/***/ }),
 
-      // 拼接 省，市，区，详细地址 的字符串并返回给用户
-      return state.address.provinceName + state.address.cityName + state.address.countyName + state.address.
-      detailInfo;
-    } } };exports.default = _default;
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
+/***/ 129:
+/*!*************************************************************************************************************************!*\
+  !*** C:/Users/gyu98/Documents/alice-wechat-uniapp/uni_modules/uni-goods-nav/components/uni-goods-nav/i18n/zh-Hant.json ***!
+  \*************************************************************************************************************************/
+/*! exports provided: uni-goods-nav.options.shop, uni-goods-nav.options.cart, uni-goods-nav.buttonGroup.addToCart, uni-goods-nav.buttonGroup.buyNow, default */
+/***/ (function(module) {
+
+module.exports = JSON.parse("{\"uni-goods-nav.options.shop\":\"店鋪\",\"uni-goods-nav.options.cart\":\"購物車\",\"uni-goods-nav.buttonGroup.addToCart\":\"加入購物車\",\"uni-goods-nav.buttonGroup.buyNow\":\"立即購買\"}");
 
 /***/ }),
 
@@ -4050,21 +4002,125 @@ module.exports = index_cjs;
       state.cart = state.cart.filter(function (x) {return x.goods_id !== goods_id;});
       // 持久化存储到本地
       this.commit('m_cart/saveToStorage');
+    },
+    // 更新所有商品的勾选状态
+    updateAllGoodsState: function updateAllGoodsState(state, newState) {
+      // 循环更新购物车中每件商品的勾选状态
+      state.cart.forEach(function (x) {return x.goods_state = newState;});
+      // 持久化存储到本地
+      this.commit('m_cart/saveToStorage');
     } },
 
 
   // 模块的 getters 属性
   getters: {
     total: function total(state) {
-      var c = 0;
-      state.cart.forEach(function (goods) {return c += goods.goods_count;});
-      return c;
+      // let c = 0
+      // state.cart.forEach(goods => c += goods.goods_count)
+      // return c
+      return state.cart.reduce(function (total, item) {return total += item.goods_count;}, 0);
+
+      return total_count;
+    },
+    checkedCount: function checkedCount(state) {
+      return state.cart.filter(function (x) {return x.goods_state;}).reduce(function (total, item) {return total += item.goods_count;}, 0);
+    },
+    // 已勾选的商品的总价
+    checkedGoodsAmount: function checkedGoodsAmount(state) {
+      // 先使用 filter 方法，从购物车中过滤器已勾选的商品
+      // 再使用 reduce 方法，将已勾选的商品数量 * 单价之后，进行累加
+      // reduce() 的返回值就是已勾选的商品的总价
+      // 最后调用 toFixed(2) 方法，保留两位小数
+      return state.cart.filter(function (x) {return x.goods_state;}).
+      reduce(function (total, item) {return total += item.goods_count * item.goods_price;}, 0).
+      toFixed(2);
     } } };exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
 
 /***/ }),
 
 /***/ 15:
+/*!******************************************************************!*\
+  !*** C:/Users/gyu98/Documents/alice-wechat-uniapp/store/user.js ***!
+  \******************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _default = {
+  // 开启命名空间
+  namespaced: true,
+
+  // state 数据
+  state: function state() {return {
+      // 3. 读取本地的收货地址数据，初始化 address 对象
+      address: JSON.parse(uni.getStorageSync('address') || '{}'),
+      // 登录成功之后的 token 字符串
+      token: uni.getStorageSync('token') || '',
+      // 用户的基本信息
+      userinfo: JSON.parse(uni.getStorageSync('userinfo') || '{}'),
+      // 重定向的 object 对象 { openType, from }
+      redirectInfo: null };},
+
+
+  // 方法
+  mutations: {
+    // 更新重定向信息
+    updateRedirectInfo: function updateRedirectInfo(state, info) {
+      state.redirectInfo = info;
+    },
+    // 更新收货地址
+    updateAddress: function updateAddress(state, address) {
+      state.address = address;
+
+      // 2. 通过 this.commit() 方法，调用 m_user 模块下的 saveAddressToStorage 方法将 address 对象持久化存储到本地
+      this.commit('m_user/saveAddressToStorage');
+    },
+    // 1. 定义将 address 持久化存储到本地 mutations 方法
+    saveAddressToStorage: function saveAddressToStorage(state) {
+      uni.setStorageSync('address', JSON.stringify(state.address));
+    },
+    // 更新用户的基本信息
+    updateUserInfo: function updateUserInfo(state, userinfo) {
+      state.userinfo = userinfo;
+      // 通过 this.commit() 方法，调用 m_user 模块下的 saveUserInfoToStorage 方法，将 userinfo 对象持久化存储到本地
+      this.commit('m_user/saveUserInfoToStorage');
+    },
+
+    // 将 userinfo 持久化存储到本地
+    saveUserInfoToStorage: function saveUserInfoToStorage(state) {
+      uni.setStorageSync('userinfo', JSON.stringify(state.userinfo));
+    },
+    // 更新 token 字符串
+    updateToken: function updateToken(state, token) {
+      state.token = token;
+      // 通过 this.commit() 方法，调用 m_user 模块下的 saveTokenToStorage 方法，将 token 字符串持久化存储到本地
+      this.commit('m_user/saveTokenToStorage');
+    },
+
+    // 将 token 字符串持久化存储到本地
+    saveTokenToStorage: function saveTokenToStorage(state) {
+      uni.setStorageSync('token', state.token);
+    } },
+
+
+
+
+  // 数据包装器
+  getters: {
+    // 收货详细地址的计算属性
+    addstr: function addstr(state) {
+      if (!state.address.provinceName) return '';
+
+      // 拼接 省，市，区，详细地址 的字符串并返回给用户
+      return state.address.provinceName + state.address.cityName + state.address.countyName + state.address.
+      detailInfo;
+    } } };exports.default = _default;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
+
+/***/ }),
+
+/***/ 16:
 /*!***********************************************************************************************************************!*\
   !*** C:/Users/gyu98/Documents/alice-wechat-uniapp/node_modules/@escook/request-miniprogram/miniprogram_dist/index.js ***!
   \***********************************************************************************************************************/
@@ -4180,18 +4236,18 @@ module.exports = g;
 
 /***/ }),
 
-/***/ 22:
+/***/ 23:
 /*!**********************************************************!*\
   !*** ./node_modules/@babel/runtime/regenerator/index.js ***!
   \**********************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! regenerator-runtime */ 23);
+module.exports = __webpack_require__(/*! regenerator-runtime */ 24);
 
 /***/ }),
 
-/***/ 23:
+/***/ 24:
 /*!************************************************************!*\
   !*** ./node_modules/regenerator-runtime/runtime-module.js ***!
   \************************************************************/
@@ -4222,7 +4278,7 @@ var oldRuntime = hadRuntime && g.regeneratorRuntime;
 // Force reevalutation of runtime.js.
 g.regeneratorRuntime = undefined;
 
-module.exports = __webpack_require__(/*! ./runtime */ 24);
+module.exports = __webpack_require__(/*! ./runtime */ 25);
 
 if (hadRuntime) {
   // Restore the original runtime.
@@ -4239,7 +4295,7 @@ if (hadRuntime) {
 
 /***/ }),
 
-/***/ 24:
+/***/ 25:
 /*!*****************************************************!*\
   !*** ./node_modules/regenerator-runtime/runtime.js ***!
   \*****************************************************/
@@ -4971,7 +5027,7 @@ if (hadRuntime) {
 
 /***/ }),
 
-/***/ 25:
+/***/ 26:
 /*!*************************************************************************!*\
   !*** C:/Users/gyu98/Documents/alice-wechat-uniapp/mixin/tabar-badge.js ***!
   \*************************************************************************/
@@ -10992,7 +11048,7 @@ function type(obj) {
 
 function flushCallbacks$1(vm) {
     if (vm.__next_tick_callbacks && vm.__next_tick_callbacks.length) {
-        if (Object({"VUE_APP_NAME":"alice-mall","VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG) {
+        if (Object({"NODE_ENV":"development","VUE_APP_NAME":"alice-mall","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG) {
             var mpInstance = vm.$scope;
             console.log('[' + (+new Date) + '][' + (mpInstance.is || mpInstance.route) + '][' + vm._uid +
                 ']:flushCallbacks[' + vm.__next_tick_callbacks.length + ']');
@@ -11013,14 +11069,14 @@ function nextTick$1(vm, cb) {
     //1.nextTick 之前 已 setData 且 setData 还未回调完成
     //2.nextTick 之前存在 render watcher
     if (!vm.__next_tick_pending && !hasRenderWatcher(vm)) {
-        if(Object({"VUE_APP_NAME":"alice-mall","VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG){
+        if(Object({"NODE_ENV":"development","VUE_APP_NAME":"alice-mall","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG){
             var mpInstance = vm.$scope;
             console.log('[' + (+new Date) + '][' + (mpInstance.is || mpInstance.route) + '][' + vm._uid +
                 ']:nextVueTick');
         }
         return nextTick(cb, vm)
     }else{
-        if(Object({"VUE_APP_NAME":"alice-mall","VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG){
+        if(Object({"NODE_ENV":"development","VUE_APP_NAME":"alice-mall","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG){
             var mpInstance$1 = vm.$scope;
             console.log('[' + (+new Date) + '][' + (mpInstance$1.is || mpInstance$1.route) + '][' + vm._uid +
                 ']:nextMPTick');
@@ -11106,7 +11162,7 @@ var patch = function(oldVnode, vnode) {
     });
     var diffData = this.$shouldDiffData === false ? data : diff(data, mpData);
     if (Object.keys(diffData).length) {
-      if (Object({"VUE_APP_NAME":"alice-mall","VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG) {
+      if (Object({"NODE_ENV":"development","VUE_APP_NAME":"alice-mall","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG) {
         console.log('[' + (+new Date) + '][' + (mpInstance.is || mpInstance.route) + '][' + this._uid +
           ']差量更新',
           JSON.stringify(diffData));
@@ -11527,7 +11583,7 @@ internalMixin(Vue);
 
 /***/ }),
 
-/***/ 70:
+/***/ 73:
 /*!********************************************************************************************************!*\
   !*** C:/Users/gyu98/Documents/alice-wechat-uniapp/uni_modules/uni-icons/components/uni-icons/icons.js ***!
   \********************************************************************************************************/
@@ -12704,7 +12760,7 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 
 /***/ }),
 
-/***/ 83:
+/***/ 86:
 /*!***************************************************************************************************************************!*\
   !*** C:/Users/gyu98/Documents/alice-wechat-uniapp/uni_modules/uni-swipe-action/components/uni-swipe-action-item/mpwxs.js ***!
   \***************************************************************************************************************************/
@@ -12798,7 +12854,7 @@ mpMixins;exports.default = _default;
 
 /***/ }),
 
-/***/ 84:
+/***/ 87:
 /*!******************************************************************************************************************************!*\
   !*** C:/Users/gyu98/Documents/alice-wechat-uniapp/uni_modules/uni-swipe-action/components/uni-swipe-action-item/bindingx.js ***!
   \******************************************************************************************************************************/
@@ -13111,7 +13167,7 @@ bindIngXMixins;exports.default = _default;
 
 /***/ }),
 
-/***/ 85:
+/***/ 88:
 /*!*****************************************************************************************************************************!*\
   !*** C:/Users/gyu98/Documents/alice-wechat-uniapp/uni_modules/uni-swipe-action/components/uni-swipe-action-item/mpother.js ***!
   \*****************************************************************************************************************************/

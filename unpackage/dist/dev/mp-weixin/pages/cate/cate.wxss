@@ -41,8 +41,8 @@
   align-items: center;
 }
 .scroll-view-container .cate-lv2-list .cate-lv2-item image {
-  width: 120px;
-  height: 90px;
+  width: 200px;
+  height: 150px;
 }
 .scroll-view-container .cate-lv2-list .cate-lv2-item .cate-lv2-item-text {
   display: flex;

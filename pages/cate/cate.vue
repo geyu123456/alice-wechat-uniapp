@@ -12,7 +12,7 @@
 			<scroll-view class="right-scroll-view" scroll-y :style="{height: wh + 'px'}">
 				<view class="cate-lv2-list" v-for="(item2, i2) in navRightList" :key="i2">
 					<view class="cate-lv2-item">
-						<image :src="item2.mainImage"></image>
+						<image :src="item2.mainImage" @click="gotoDetail(item2)"></image>
 						
 						<view class="cate-lv2-item-text">
 							<text>{{item2.name}}</text>
@@ -55,13 +55,18 @@
 				if (res.code !== 200) return uni.$showMsg()
 				this.navLeftList = res.data
 				this.navRightList = res.data[0].goodsList
-				console.log(res.data[0].goodsList)
-				console.log(res.data)
+
 			},
 			// 选中项改变的事件处理函数
 			activeChanged(i) {
 				this.active = i
 				this.navRightList = this.navLeftList[i].goodsList
+			},
+			// 点击跳转到商品详情页面
+			gotoDetail(item) {
+				uni.navigateTo({
+					url: '/subpkg/goods_detail/goods_detail?goods_id=' + item.goodsId
+				})
 			}
 		}
 	}
@@ -112,8 +117,8 @@
 		    align-items: center;
 		
 		    image {
-		      width: 120px;
-		      height: 90px;
+		      width: 200px;
+		      height: 150px;
 		    }
 		.cate-lv2-item-text{
 			display: flex;

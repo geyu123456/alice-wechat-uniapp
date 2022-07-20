@@ -1,0 +1,53 @@
+{
+    "pages": [
+        "pages/home/home",
+        "pages/cate/cate",
+        "pages/cart/cart",
+        "pages/my/my"
+    ],
+    "subPackages": [
+        {
+            "root": "subpkg",
+            "pages": [
+                "goods_detail/goods_detail"
+            ]
+        }
+    ],
+    "window": {
+        "navigationBarTextStyle": "black",
+        "navigationBarTitleText": "爱丽丝花艺",
+        "navigationBarBackgroundColor": "#F8F8F8",
+        "backgroundColor": "#F8F8F8"
+    },
+    "tabBar": {
+        "selectedColor": "#C0000",
+        "list": [
+            {
+                "pagePath": "pages/home/home",
+                "text": "首页",
+                "iconPath": "./static/home1.png",
+                "selectedIconPath": "./static/home1Select.png"
+            },
+            {
+                "pagePath": "pages/cate/cate",
+                "text": "分类",
+                "iconPath": "./static/cart.png",
+                "selectedIconPath": "./static/cartSelect.png"
+            },
+            {
+                "pagePath": "pages/cart/cart",
+                "text": "购物车",
+                "iconPath": "./static/cate.png",
+                "selectedIconPath": "./static/cateSelect.png"
+            },
+            {
+                "pagePath": "pages/my/my",
+                "text": "我的",
+                "iconPath": "./static/my.png",
+                "selectedIconPath": "./static/mySelect.png"
+            }
+        ]
+    },
+    "usingComponents": {},
+    "sitemapLocation": "sitemap.json"
+}

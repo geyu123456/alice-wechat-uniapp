@@ -1,20 +1,18 @@
 <template>
 	<view>
-		<view>
-			<swiper :indicator-dots="true" :autoplay="true" :interval="3000" :duration="1000" :circular="true">
-				<swiper-item v-for="(item,i) in swiperList" :key="i">
-					<view class="swiper_item">
-						<navigator class="swiper-item" :url="'/subpkg/goods_detail/goods_detail?goods_id=1' ">
-							<image :src="item"></image>
-						</navigator>
-					</view>
-				</swiper-item>
 
-			</swiper>
-		</view>
+		<swiper :indicator-dots="true" :autoplay="true" :interval="3000" :duration="1000" :circular="true">
+			<swiper-item v-for="(item,i) in swiperList" :key="i">
+				<navigator class="swiper-item" :url="'/subpkg/goods_detail/goods_detail?goods_id=1' ">
+					<image :src="item"></image>
+				</navigator>
+			</swiper-item>
+
+		</swiper>
+
 		<view class="goods_list">
 			<view class="goods_item" v-for="(item,i) in allGoods" :key="i">
-				<image  class="image" :src="item.mainImage" @click="gotoDetail(item)"></image>
+				<image class="image" :src="item.mainImage" @click="gotoDetail(item)"></image>
 			</view>
 		</view>
 	</view>
@@ -23,7 +21,7 @@
 <script>
 	import badgeMix from '@/mixin/tabar-badge.js'
 	export default {
-		mixins:[badgeMix],
+		mixins: [badgeMix],
 		data() {
 			return {
 				swiperList: [
@@ -62,36 +60,48 @@
 			},
 			// 点击跳转到商品详情页面
 			gotoDetail(item) {
-			  uni.navigateTo({
-			    url: '/subpkg/goods_detail/goods_detail?goods_id=' + item.goodsId
-			  })
+				uni.navigateTo({
+					url: '/subpkg/goods_detail/goods_detail?goods_id=' + item.goodsId
+				})
 			}
 		}
 	}
 </script>
 
 <style lang="scss">
-	.goods_item{
-	  display: flex;
-	  flex-direction: column;
-	
-	  margin: 30rpx;
-	  margin-bottom: 40rpx;
-	
-	  border: 1rpx solid  #cdd6d2 ;
-	  border-radius: 10rpx;
-	  /* box-shadow: 4rpx 4rpx 4rpx #707b8b; */
-	  position: relative;
-	  -moz-box-shadow:0px 1px 5px #d0d0d0; -webkit-box-shadow:0px 1px 5px #d0d0d0; box-shadow:0px 1px 5px #d0d0d0;
-	
-	}
-	
-	
-	.goods_item .image{
-	  border-radius: 10rpx 10rpx 0 0;
-	  width: 100%;
-	  height: 450rpx;
-	  background-color: #eee;
+	swiper {
+		height: 400rpx;
+
+		.swiper-item,
+		image {
+			width: 100%;
+			height: 100%;
+		}
 	}
 
+	.goods_item {
+		display: flex;
+		flex-direction: column;
+
+		margin: 30rpx;
+		margin-bottom: 40rpx;
+
+
+		border: 1rpx solid #cdd6d2;
+		border-radius: 10rpx;
+		/* box-shadow: 4rpx 4rpx 4rpx #707b8b; */
+		position: relative;
+		-moz-box-shadow: 0px 1px 5px #d0d0d0;
+		-webkit-box-shadow: 0px 1px 5px #d0d0d0;
+		box-shadow: 0px 1px 5px #d0d0d0;
+
+	}
+
+
+	.goods_item .image {
+		border-radius: 10rpx 10rpx 0 0;
+		width: 100%;
+		height: 450rpx;
+		background-color: #eee;
+	}
 </style>

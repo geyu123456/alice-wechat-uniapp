@@ -136,6 +136,27 @@
 			      this.addToCart(goods)
 			
 			   }
+			   // 1. 判断是否点击了 加入购物车 按钮
+			   if (e.content.text === '立即购买') {
+			   			
+			      // 2. 组织一个商品的信息对象
+			      const goods = {
+			         goods_id: this.goods_info.goodsId,       // 商品的Id
+			         goods_name: this.goods_info.name,   // 商品的名称
+			         goods_price: this.goods_info.price, // 商品的价格
+			         goods_count: 1,                           // 商品的数量
+			         goods_small_logo: this.goods_info.mainImage, // 商品的图片
+			         goods_state: false                         // 商品的勾选状态
+			      }
+			   			
+			      // 3. 通过 this 调用映射过来的 addToCart 方法，把商品信息对象存储到购物车中
+			      this.addToCart(goods)
+				  // 切换到购物车页面
+				  uni.switchTab({
+				  	url: '/pages/cart/cart'
+				  })
+			   			
+			   }
 			}
 			
 		}

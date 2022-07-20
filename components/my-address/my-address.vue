@@ -6,7 +6,7 @@
 		</view>
 
 		<!-- 渲染收货信息的盒子 -->
-		<view class="address-info-box" v-else>
+		<view class="address-info-box" @click="chooseAddress" v-else>
 			<view class="row1">
 				<view class="row1-left">
 					<view class="username">收货人：<text>{{address.userName}}</text></view>
