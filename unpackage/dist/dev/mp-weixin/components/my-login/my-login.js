@@ -198,6 +198,7 @@ var _vuex = __webpack_require__(/*! vuex */ 13);function _interopRequireDefault(
                 _this.updateToken(loginResult.data.openid);
                 uni.$showMsg('登录成功');
 
+
                 _this.navigateBack();case 19:case "end":return _context.stop();}}}, _callee);}))();
     },
 
@@ -227,16 +228,21 @@ var _vuex = __webpack_require__(/*! vuex */ 13);function _interopRequireDefault(
         success: function success(res) {
           //console.log(res)
           if (res.errMsg == 'getUserProfile:ok') {
-            // console.log("==========")
-            //通过code获取openId等信息
-            uni.getUserInfo({
-              desc: "weixin",
-              success: function success(info) {
-                _this3.updateUserInfo(info.userInfo);
-                console.log('=info==', info);
-                _this3.getAccessToken(info);
-              } });
+            console.log("==========");
+            console.log(res);
 
+            _this3.updateUserInfo(res.userInfo);
+            _this3.getAccessToken(res);
+            // //通过code获取openId等信息
+            // uni.getUserInfo({
+            // 	desc: "weixin",
+            // 	success: (info) => {
+
+            // 		this.updateUserInfo(info.userInfo)
+            // 		console.log('=info==', info)
+            // 		this.getAccessToken(info)
+            // 	}
+            // })
           }
         },
 

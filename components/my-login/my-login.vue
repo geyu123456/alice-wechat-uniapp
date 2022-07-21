@@ -58,6 +58,7 @@
 				// 2. 更新 vuex 中的 token
 				this.updateToken(loginResult.data.openid)
 				uni.$showMsg('登录成功')
+				
 
 				this.navigateBack()
 			},
@@ -88,16 +89,21 @@
 					success: (res) => {
 						//console.log(res)
 						if (res.errMsg == 'getUserProfile:ok') {
-							// console.log("==========")
-							//通过code获取openId等信息
-							uni.getUserInfo({
-								desc: "weixin",
-								success: (info) => {
-									this.updateUserInfo(info.userInfo)
-									console.log('=info==', info)
-									this.getAccessToken(info)
-								}
-							})
+							 console.log("==========")
+							 console.log(res)
+							 
+							 this.updateUserInfo(res.userInfo)
+							 this.getAccessToken(res)
+							// //通过code获取openId等信息
+							// uni.getUserInfo({
+							// 	desc: "weixin",
+							// 	success: (info) => {
+								
+							// 		this.updateUserInfo(info.userInfo)
+							// 		console.log('=info==', info)
+							// 		this.getAccessToken(info)
+							// 	}
+							// })
 						}
 					},
 
