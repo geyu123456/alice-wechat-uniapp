@@ -2626,57 +2626,6 @@ var _default = store;exports.default = _default;
 
 /***/ }),
 
-/***/ 126:
-/*!*********************************************************************************************************************!*\
-  !*** C:/Users/gyu98/Documents/alice-wechat-uniapp/uni_modules/uni-goods-nav/components/uni-goods-nav/i18n/index.js ***!
-  \*********************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _en = _interopRequireDefault(__webpack_require__(/*! ./en.json */ 127));
-var _zhHans = _interopRequireDefault(__webpack_require__(/*! ./zh-Hans.json */ 128));
-var _zhHant = _interopRequireDefault(__webpack_require__(/*! ./zh-Hant.json */ 129));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}var _default =
-{
-  en: _en.default,
-  'zh-Hans': _zhHans.default,
-  'zh-Hant': _zhHant.default };exports.default = _default;
-
-/***/ }),
-
-/***/ 127:
-/*!********************************************************************************************************************!*\
-  !*** C:/Users/gyu98/Documents/alice-wechat-uniapp/uni_modules/uni-goods-nav/components/uni-goods-nav/i18n/en.json ***!
-  \********************************************************************************************************************/
-/*! exports provided: uni-goods-nav.options.shop, uni-goods-nav.options.cart, uni-goods-nav.buttonGroup.addToCart, uni-goods-nav.buttonGroup.buyNow, default */
-/***/ (function(module) {
-
-module.exports = JSON.parse("{\"uni-goods-nav.options.shop\":\"shop\",\"uni-goods-nav.options.cart\":\"cart\",\"uni-goods-nav.buttonGroup.addToCart\":\"add to cart\",\"uni-goods-nav.buttonGroup.buyNow\":\"buy now\"}");
-
-/***/ }),
-
-/***/ 128:
-/*!*************************************************************************************************************************!*\
-  !*** C:/Users/gyu98/Documents/alice-wechat-uniapp/uni_modules/uni-goods-nav/components/uni-goods-nav/i18n/zh-Hans.json ***!
-  \*************************************************************************************************************************/
-/*! exports provided: uni-goods-nav.options.shop, uni-goods-nav.options.cart, uni-goods-nav.buttonGroup.addToCart, uni-goods-nav.buttonGroup.buyNow, default */
-/***/ (function(module) {
-
-module.exports = JSON.parse("{\"uni-goods-nav.options.shop\":\"店铺\",\"uni-goods-nav.options.cart\":\"购物车\",\"uni-goods-nav.buttonGroup.addToCart\":\"加入购物车\",\"uni-goods-nav.buttonGroup.buyNow\":\"立即购买\"}");
-
-/***/ }),
-
-/***/ 129:
-/*!*************************************************************************************************************************!*\
-  !*** C:/Users/gyu98/Documents/alice-wechat-uniapp/uni_modules/uni-goods-nav/components/uni-goods-nav/i18n/zh-Hant.json ***!
-  \*************************************************************************************************************************/
-/*! exports provided: uni-goods-nav.options.shop, uni-goods-nav.options.cart, uni-goods-nav.buttonGroup.addToCart, uni-goods-nav.buttonGroup.buyNow, default */
-/***/ (function(module) {
-
-module.exports = JSON.parse("{\"uni-goods-nav.options.shop\":\"店鋪\",\"uni-goods-nav.options.cart\":\"購物車\",\"uni-goods-nav.buttonGroup.addToCart\":\"加入購物車\",\"uni-goods-nav.buttonGroup.buyNow\":\"立即購買\"}");
-
-/***/ }),
-
 /***/ 13:
 /*!**************************************************************************************!*\
   !*** ./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vuex3/dist/vuex.common.js ***!
@@ -3934,6 +3883,57 @@ module.exports = index_cjs;
 
 /***/ }),
 
+/***/ 134:
+/*!*********************************************************************************************************************!*\
+  !*** C:/Users/gyu98/Documents/alice-wechat-uniapp/uni_modules/uni-goods-nav/components/uni-goods-nav/i18n/index.js ***!
+  \*********************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _en = _interopRequireDefault(__webpack_require__(/*! ./en.json */ 135));
+var _zhHans = _interopRequireDefault(__webpack_require__(/*! ./zh-Hans.json */ 136));
+var _zhHant = _interopRequireDefault(__webpack_require__(/*! ./zh-Hant.json */ 137));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}var _default =
+{
+  en: _en.default,
+  'zh-Hans': _zhHans.default,
+  'zh-Hant': _zhHant.default };exports.default = _default;
+
+/***/ }),
+
+/***/ 135:
+/*!********************************************************************************************************************!*\
+  !*** C:/Users/gyu98/Documents/alice-wechat-uniapp/uni_modules/uni-goods-nav/components/uni-goods-nav/i18n/en.json ***!
+  \********************************************************************************************************************/
+/*! exports provided: uni-goods-nav.options.shop, uni-goods-nav.options.cart, uni-goods-nav.buttonGroup.addToCart, uni-goods-nav.buttonGroup.buyNow, default */
+/***/ (function(module) {
+
+module.exports = JSON.parse("{\"uni-goods-nav.options.shop\":\"shop\",\"uni-goods-nav.options.cart\":\"cart\",\"uni-goods-nav.buttonGroup.addToCart\":\"add to cart\",\"uni-goods-nav.buttonGroup.buyNow\":\"buy now\"}");
+
+/***/ }),
+
+/***/ 136:
+/*!*************************************************************************************************************************!*\
+  !*** C:/Users/gyu98/Documents/alice-wechat-uniapp/uni_modules/uni-goods-nav/components/uni-goods-nav/i18n/zh-Hans.json ***!
+  \*************************************************************************************************************************/
+/*! exports provided: uni-goods-nav.options.shop, uni-goods-nav.options.cart, uni-goods-nav.buttonGroup.addToCart, uni-goods-nav.buttonGroup.buyNow, default */
+/***/ (function(module) {
+
+module.exports = JSON.parse("{\"uni-goods-nav.options.shop\":\"店铺\",\"uni-goods-nav.options.cart\":\"购物车\",\"uni-goods-nav.buttonGroup.addToCart\":\"加入购物车\",\"uni-goods-nav.buttonGroup.buyNow\":\"立即购买\"}");
+
+/***/ }),
+
+/***/ 137:
+/*!*************************************************************************************************************************!*\
+  !*** C:/Users/gyu98/Documents/alice-wechat-uniapp/uni_modules/uni-goods-nav/components/uni-goods-nav/i18n/zh-Hant.json ***!
+  \*************************************************************************************************************************/
+/*! exports provided: uni-goods-nav.options.shop, uni-goods-nav.options.cart, uni-goods-nav.buttonGroup.addToCart, uni-goods-nav.buttonGroup.buyNow, default */
+/***/ (function(module) {
+
+module.exports = JSON.parse("{\"uni-goods-nav.options.shop\":\"店鋪\",\"uni-goods-nav.options.cart\":\"購物車\",\"uni-goods-nav.buttonGroup.addToCart\":\"加入購物車\",\"uni-goods-nav.buttonGroup.buyNow\":\"立即購買\"}");
+
+/***/ }),
+
 /***/ 14:
 /*!******************************************************************!*\
   !*** C:/Users/gyu98/Documents/alice-wechat-uniapp/store/cart.js ***!
@@ -3998,8 +3998,16 @@ module.exports = index_cjs;
     },
     // 根据 Id 从购物车中删除对应的商品信息
     removeGoodsById: function removeGoodsById(state, goods_id) {
+
       // 调用数组的 filter 方法进行过滤
       state.cart = state.cart.filter(function (x) {return x.goods_id !== goods_id;});
+      // 持久化存储到本地
+      this.commit('m_cart/saveToStorage');
+    },
+    // 删除购物车中所有商品
+    removeAllGoods: function removeAllGoods(state) {
+      // 调用数组的 filter 方法进行过滤
+      state.cart = state.cart.filter(function (x) {return x.goods_state === true;});
       // 持久化存储到本地
       this.commit('m_cart/saveToStorage');
     },
@@ -11583,7 +11591,7 @@ internalMixin(Vue);
 
 /***/ }),
 
-/***/ 73:
+/***/ 81:
 /*!********************************************************************************************************!*\
   !*** C:/Users/gyu98/Documents/alice-wechat-uniapp/uni_modules/uni-icons/components/uni-icons/icons.js ***!
   \********************************************************************************************************/
@@ -12760,7 +12768,7 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 
 /***/ }),
 
-/***/ 86:
+/***/ 94:
 /*!***************************************************************************************************************************!*\
   !*** C:/Users/gyu98/Documents/alice-wechat-uniapp/uni_modules/uni-swipe-action/components/uni-swipe-action-item/mpwxs.js ***!
   \***************************************************************************************************************************/
@@ -12854,7 +12862,7 @@ mpMixins;exports.default = _default;
 
 /***/ }),
 
-/***/ 87:
+/***/ 95:
 /*!******************************************************************************************************************************!*\
   !*** C:/Users/gyu98/Documents/alice-wechat-uniapp/uni_modules/uni-swipe-action/components/uni-swipe-action-item/bindingx.js ***!
   \******************************************************************************************************************************/
@@ -13167,7 +13175,7 @@ bindIngXMixins;exports.default = _default;
 
 /***/ }),
 
-/***/ 88:
+/***/ 96:
 /*!*****************************************************************************************************************************!*\
   !*** C:/Users/gyu98/Documents/alice-wechat-uniapp/uni_modules/uni-swipe-action/components/uni-swipe-action-item/mpother.js ***!
   \*****************************************************************************************************************************/

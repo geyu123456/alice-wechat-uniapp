@@ -30,7 +30,7 @@
 			<view class="panel">
 
 				<!-- 面板的标题 -->
-				<view class="panel-title">我的订单</view>
+				<view class="panel-title" @click="gotoMyOrder()">我的订单</view>
 				<!-- 面板的主体 -->
 				<view class="panel-body">
 					<!-- 面板主体中的 item 项 -->
@@ -110,6 +110,12 @@
 			 	this.updateToken('')
 					this.updateAddress({})
 				}
+			},
+			// 点击跳转到商品详情页面
+			gotoMyOrder() {
+				uni.navigateTo({
+					url: '/subpkg/my_order/my_order'
+				})
 			}
 		},
 

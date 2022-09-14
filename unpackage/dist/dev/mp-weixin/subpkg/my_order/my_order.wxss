@@ -1,0 +1,33 @@
+@charset "UTF-8";
+/* 水平间距 */
+/* 水平间距 */
+.order_item {
+  display: flex;
+  flex-direction: column;
+  margin: 30rpx;
+  margin-bottom: 40rpx;
+  border: 1rpx solid #cdd6d2;
+  border-radius: 10rpx;
+  /* box-shadow: 4rpx 4rpx 4rpx #707b8b; */
+  position: relative;
+  box-shadow: 0px 1px 5px #d0d0d0;
+}
+.order_item text {
+  font-size: 12px;
+  margin: 10px;
+}
+.order_item .image {
+  border-radius: 10rpx 10rpx 0 0;
+  width: 150px;
+  height: 100px;
+  background-color: #eee;
+}
+.order_item .order-info-text {
+  display: flex;
+  flex-direction: column;
+}
+.order_item .order-info-text text {
+  font-size: 12px;
+  margin: 10px;
+}
+

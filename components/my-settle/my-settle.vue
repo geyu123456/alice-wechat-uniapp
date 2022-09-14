@@ -33,7 +33,7 @@
 			...mapGetters('m_user', ['addstr']),
 			// token 是用户登录成功之后的 token 字符串
 			...mapState('m_user', ['token']),
-			...mapState('m_cart',['cart']),
+			...mapState('m_cart', ['cart']),
 			// 2. 是否全选
 			isFullCheck() {
 				return this.total === this.checkedCount
@@ -42,7 +42,7 @@
 		},
 		methods: {
 			// 2. 使用 mapMutations 辅助函数，把 m_cart 模块提供的 updateAllGoodsState 方法映射到当前组件中使用
-			...mapMutations('m_cart', ['updateAllGoodsState']),
+			...mapMutations('m_cart', ['updateAllGoodsState','removeGoodsById']),
 			// 把 m_user 模块中的 updateRedirectInfo 方法映射到当前页面中使用
 			...mapMutations('m_user', ['updateRedirectInfo']),
 			// label 的点击事件处理函数
@@ -55,22 +55,24 @@
 			settlement() {
 				// 1. 先判断是否勾选了要结算的商品
 				if (!this.checkedCount) return uni.$showMsg('请选择要结算的商品！')
+				
+				// 3. 最后判断用户是否登录了
+				if (!this.token) return this.delayNavigate()
 
 				// 2. 再判断用户是否选择了收货地址
 				if (!this.addstr) return uni.$showMsg('请选择收货地址！')
 
-				// 3. 最后判断用户是否登录了
-				if (!this.token) return this.delayNavigate()
 				
+
 				this.payOrder()
 			},
 			async payOrder() {
 				const order_info = {
-					//totalAmount=this.checkedGoodsAmount,
-					address :this.addstr,
-					openId:this.token,
+					totalAmount:this.checkedGoodsAmount,
+					address: this.addstr,
+					openId: this.token,
 
-					totalAmount : 0.01,
+					// totalAmount: 0.01,
 					goodsList: this.cart.filter(x => x.goods_state).map(x => ({
 						goodsId: x.goods_id,
 						goodsCount: x.goods_count
@@ -82,7 +84,43 @@
 				const {
 					data: res
 				} = await uni.$http.post('/order/createOrder', order_info)
-				console.log(res)
+				
+
+				// 2.3 得到订单支付相Math.round(new Date().getTime()/1000)关的必要参数
+
+				// 3. 发起微信支付
+				// 3.1 调用 uni.requestPayment() 发起微信支付
+				const [err, succ] = await uni.requestPayment({
+					provider: 'wxpay',
+					nonceStr: res.data.nonceStr,
+					package: res.data.packageValue,
+					timeStamp: res.data.timeStamp,
+					signType: 'MD5',
+					paySign: res.data.paySign
+
+				})
+				// 3.2 未完成支付
+				if (err) {
+					console.error(err)
+					return uni.$showMsg('订单未支付！')
+				}
+				
+				const goodsList= this.cart.filter(x => x.goods_state).map(x => ({
+					goodsId: x.goods_id,
+					goodsCount: x.goods_count
+				}))
+				
+				
+				for(let x in goodsList){
+					this.removeGoodsById(goodsList[x].goodsId)
+				}
+				
+				
+
+				uni.$showMsg('下单成功')
+				uni.navigateTo({
+					url: '/subpkg/my_order/my_order'
+				})
 
 			},
 

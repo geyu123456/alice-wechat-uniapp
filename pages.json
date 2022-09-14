@@ -40,6 +40,15 @@
                 }
                 
                 }
+                ,{
+                    "path" : "my_order/my_order",
+                    "style" :                                                                                    
+                {
+                    "navigationBarTitleText": "",
+                    "enablePullDownRefresh": false
+                }
+                
+                }
             ]
 	    }
 	  ],

@@ -162,6 +162,10 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
+
+
+
 var _tabarBadge = _interopRequireDefault(__webpack_require__(/*! @/mixin/tabar-badge.js */ 26));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) {try {var info = gen[key](arg);var value = info.value;} catch (error) {reject(error);return;}if (info.done) {resolve(value);} else {Promise.resolve(value).then(_next, _throw);}}function _asyncToGenerator(fn) {return function () {var self = this,args = arguments;return new Promise(function (resolve, reject) {var gen = fn.apply(self, args);function _next(value) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value);}function _throw(err) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err);}_next(undefined);});};}var _default =
 {
   mixins: [_tabarBadge.default],
@@ -184,22 +188,26 @@ var _tabarBadge = _interopRequireDefault(__webpack_require__(/*! @/mixin/tabar-b
     this.getAllGoodsList();
   },
   methods: {
-    getSwiperList: function getSwiperList() {
-
-      return ['http://alice-image-oss.oss-cn-beijing.aliyuncs.com/mall/images/20201208/微信图片_20201208225733.jpg',
-      'http://alice-image-oss.oss-cn-beijing.aliyuncs.com/mall/images/20201208/微信图片_20201208225715.jpg',
-      'http://alice-image-oss.oss-cn-beijing.aliyuncs.com/mall/images/20201208/微信图片_20201208225742.jpg',
-      'http://alice-image-oss.oss-cn-beijing.aliyuncs.com/mall/images/20201208/微信图片_20201208225358.jpg'];
-
-    },
-    getAllGoodsList: function getAllGoodsList() {var _this = this;return _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee() {var _yield$uni$$http$get, res;return _regenerator.default.wrap(function _callee$(_context) {while (1) {switch (_context.prev = _context.next) {case 0:_context.next = 2;return (
+    getSwiperList: function getSwiperList() {var _this = this;return _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee() {var _yield$uni$$http$get, res;return _regenerator.default.wrap(function _callee$(_context) {while (1) {switch (_context.prev = _context.next) {case 0:_context.next = 2;return (
 
 
-                  uni.$http.get('/goods/queryList'));case 2:_yield$uni$$http$get = _context.sent;res = _yield$uni$$http$get.data;
+
+                  uni.$http.get('/goods/queryList', {
+                    classify: '0' }));case 2:_yield$uni$$http$get = _context.sent;res = _yield$uni$$http$get.data;
+
                 console.log(res);if (!(
                 res.code !== 200)) {_context.next = 7;break;}return _context.abrupt("return", uni.$showMsg());case 7:
-                _this.allGoods = res.data;
+                _this.swiperList = res.data;
                 console.log(res.data);case 9:case "end":return _context.stop();}}}, _callee);}))();
+    },
+    getAllGoodsList: function getAllGoodsList() {var _this2 = this;return _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee2() {var _yield$uni$$http$get2, res;return _regenerator.default.wrap(function _callee2$(_context2) {while (1) {switch (_context2.prev = _context2.next) {case 0:_context2.next = 2;return (
+
+
+                  uni.$http.get('/goods/queryList'));case 2:_yield$uni$$http$get2 = _context2.sent;res = _yield$uni$$http$get2.data;
+                console.log(res);if (!(
+                res.code !== 200)) {_context2.next = 7;break;}return _context2.abrupt("return", uni.$showMsg());case 7:
+                _this2.allGoods = res.data;
+                console.log(res.data);case 9:case "end":return _context2.stop();}}}, _callee2);}))();
     },
     // 点击跳转到商品详情页面
     gotoDetail: function gotoDetail(item) {
